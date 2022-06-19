@@ -11,6 +11,9 @@
 
     -fx-background-image: url("../img/fondoinicio.jpg");
 }
+.btnPrincipal{
+    -fx-background-color: transparent;
+}
 .text-area {
     -fx-background-color: opacity;
 }
