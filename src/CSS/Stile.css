@@ -7,10 +7,10 @@
  
 }
 .fondoInicio{
-
+    -fx-   
 }
 .fondoInicio{
-    -fx-background-color: grey;
+    -fx-background-color: red;
 }
 .text-area {
     -fx-background-color: opacity;
