@@ -8,3 +8,11 @@ build/classes/juegomemoriamultiplicacion/Vistas/Contadores.class
 *.class
 build/classes/controller/PerdisteController.class
 build/classes/controller/GanasteController.class
+build/classes/controller/GanasteController.class
+build/classes/controller/PerdisteController.class
+build/classes/controller/GanasteController.class
+build/classes/controller/principalController.class
+nbproject/project.properties
+nbproject/private/private.properties
+build/classes/juegomemoriamultiplicacion/Vistas/ParejaDeCartas.class
+build/classes/juegomemoriamultiplicacion/Vistas/ComparadorDeCartas.class
