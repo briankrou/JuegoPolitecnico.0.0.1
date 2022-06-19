@@ -18,9 +18,6 @@
                <font>
                   <Font size="25.0" />
                </font>
-               <padding>
-                  <Insets bottom="1.0" />
-               </padding>
                <graphic>
                   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/Stile.css">
                      <children>
@@ -41,12 +38,12 @@
                   <Insets bottom="27.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="60.0" prefWidth="240.0" styleClass="btnPrincipal" text="Iniciar">
+            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="60.0" prefWidth="240.0" styleClass="btnPrincipal">
                <font>
                   <Font size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="24.0" />
+                  <Insets />
                </VBox.margin>
                <graphic>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="191.0" stylesheets="@../CSS/Stile.css">
@@ -73,7 +70,7 @@
                   <Font size="25.0" />
                </font>
                <graphic>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" stylesheets="@../CSS/Stile.css">
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="200.0" stylesheets="@../CSS/Stile.css">
                      <children>
                         <Label text="Salir" textFill="#06e842">
                            <font>
@@ -83,7 +80,7 @@
                               <Insets left="2.0" right="80.0" />
                            </HBox.margin>
                         </Label>
-                        <ImageView fitHeight="50.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/exit_door_cinema_icon_190851.png" />
                            </image>
