@@ -3,14 +3,15 @@
     
     -fx-background-image: url("../img/pp.jpg");
     
-    
- 
 }
+ 
+
 .fondoInicio{
 
 }
 .fondoInicio{
-    -fx-background-color: green;
+
+    -fx-background-color: blue;
 }
 .text-area {
     -fx-background-color: opacity;
