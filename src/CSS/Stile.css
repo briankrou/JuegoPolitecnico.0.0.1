@@ -12,7 +12,11 @@
     -fx-background-image: url("../img/fondoinicio.jpg");
 }
 .btnPrincipal{
+ 
     -fx-background-color: transparent;
+}
+.btnPrincipal:hover{
+       -fx-border-color: green;
 }
 .text-area {
     -fx-background-color: opacity;

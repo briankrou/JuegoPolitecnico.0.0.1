@@ -14,7 +14,7 @@
     <children>
       <VBox layoutX="130.0" layoutY="82.0" prefHeight="321.0" prefWidth="243.0">
          <children>
-            <Button fx:id="btnInformacion" mnemonicParsing="false" onAction="#abrirInformacion" prefHeight="52.0" prefWidth="240.0" styleClass="btnPrincipal">
+            <Button fx:id="btnInformacion" mnemonicParsing="false" onAction="#abrirInformacion" prefHeight="60.0" prefWidth="240.0" styleClass="btnPrincipal">
                <font>
                   <Font size="25.0" />
                </font>
@@ -22,9 +22,9 @@
                   <Insets bottom="1.0" />
                </padding>
                <graphic>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="btnPrincipal" stylesheets="@../CSS/Stile.css">
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/Stile.css">
                      <children>
-                        <Label text="Informacion" textFill="#06e842">
+                        <Label prefHeight="72.0" prefWidth="127.0" text="Informacion" textFill="#06e842">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -37,19 +37,60 @@
                      </children>
                   </HBox>
                </graphic>
+               <VBox.margin>
+                  <Insets bottom="27.0" />
+               </VBox.margin>
             </Button>
-            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="52.0" prefWidth="240.0" text="Iniciar">
+            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="60.0" prefWidth="240.0" styleClass="btnPrincipal" text="Iniciar">
                <font>
                   <Font size="25.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="24.0" />
                </VBox.margin>
+               <graphic>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="191.0" stylesheets="@../CSS/Stile.css">
+                     <children>
+                        <Label text="Iniciar" textFill="#06e842">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/play.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="59.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </graphic>
             </Button>
-            <Button fx:id="Salir" mnemonicParsing="false" onAction="#Exit" prefHeight="52.0" prefWidth="240.0" text="Salir Del Juego">
+            <Button fx:id="Salir" mnemonicParsing="false" onAction="#Exit" prefHeight="60.0" prefWidth="240.0" styleClass="btnPrincipal" text="Salir Del Juego">
                <font>
                   <Font size="25.0" />
                </font>
+               <graphic>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" stylesheets="@../CSS/Stile.css">
+                     <children>
+                        <Label text="Salir" textFill="#06e842">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="2.0" right="80.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/exit_door_cinema_icon_190851.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </graphic>
             </Button>
          </children>
       </VBox>
