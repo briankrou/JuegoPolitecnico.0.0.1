@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="502.0" styleClass="fondoInicio" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principalController">
     <children>
-      <VBox layoutX="130.0" layoutY="82.0" prefHeight="321.0" prefWidth="243.0">
+      <VBox alignment="CENTER" layoutX="140.0" layoutY="48.0" prefHeight="321.0" prefWidth="243.0">
          <children>
             <Button fx:id="btnInformacion" mnemonicParsing="false" onAction="#abrirInformacion" prefHeight="60.0" prefWidth="240.0" styleClass="btnPrincipal">
                <font>

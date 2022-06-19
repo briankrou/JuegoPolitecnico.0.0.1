@@ -14,5 +14,5 @@ build/classes/controller/GanasteController.class
 build/classes/controller/principalController.class
 nbproject/project.properties
 nbproject/private/private.properties
-build/classes/juegomemoriamultiplicacion/Vistas/ParejaDeCartas.class
-build/classes/juegomemoriamultiplicacion/Vistas/ComparadorDeCartas.class
+build/classes/juegomemoriamultiplicacion/Vistas/JuegoMemoriaM.class
+build/classes/CSS/Stile.css
