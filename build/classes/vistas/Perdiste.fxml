@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PerdisteController">
+   <children>
+      <VBox layoutX="75.0" layoutY="43.0" prefHeight="134.0" prefWidth="204.0">
+         <children>
+            <HBox prefHeight="88.0" prefWidth="298.0">
+               <children>
+                  <ImageView fx:id="estrella2" fitHeight="68.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true" translateX="106.0" translateY="20.0">
+                     <image>
+                        <Image url="@../img/Star_96x96-32_37882.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="estrellaPerdida2" fitHeight="67.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" translateX="38.0" translateY="20.0">
+                     <image>
+                        <Image url="@../img/noHayEstrella.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrella1" disable="true" fitHeight="68.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true" translateX="56.0">
+                     <image>
+                        <Image url="@../img/Star_96x96-32_37882.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="estrellaPerdida1" fitHeight="67.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" translateX="-11.0" translateY="-1.0">
+                     <image>
+                        <Image url="@../img/noHayEstrella.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrella3" fitHeight="68.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true" translateY="22.0">
+                     <image>
+                        <Image url="@../img/Star_96x96-32_37882.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="estrellaPerdida3" fitHeight="67.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" translateX="-67.0" translateY="20.0">
+                     <image>
+                        <Image url="@../img/noHayEstrella.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="277.0">
+               <children>
+                  <ImageView fx:id="estrella4" fitHeight="68.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true" translateX="-24.0" translateY="3.0">
+                     <image>
+                        <Image url="@../img/Star_96x96-32_37882.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="estrellaPerdida4" fitHeight="67.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" scaleZ="0.0" translateX="-92.0" translateY="2.0">
+                     <image>
+                        <Image url="@../img/noHayEstrella.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrella5" fitHeight="68.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" translateX="138.0" translateY="6.0">
+                     <image>
+                        <Image url="@../img/Star_96x96-32_37882.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="estrellaPerdida5" fitHeight="67.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" translateX="70.0" translateY="3.0">
+                     <image>
+                        <Image url="@../img/noHayEstrella.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="188.0" layoutY="203.0" prefHeight="256.0" prefWidth="224.0">
+         <children>
+            <Label prefHeight="95.0" prefWidth="219.0" text="Perdiste">
+               <font>
+                  <Font size="61.0" />
+               </font>
+            </Label>
+            <Label fx:id="puntos" alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="220.0" text="0000" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnPerdisteAceptar" mnemonicParsing="false" onAction="#AceptarPerdida" prefHeight="55.0" prefWidth="223.0" text="intentar de nuevo">
+               <VBox.margin>
+                  <Insets bottom="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#Exit" prefHeight="55.0" prefWidth="223.0" text="salir" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaModoFacilController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="700.0">
+         <children>
+            <Pane prefHeight="62.0" prefWidth="612.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-6.0" prefHeight="62.0" prefWidth="708.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="79.0" text="NIVEL:">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                        <Label fx:id="Nivel" contentDisplay="CENTER" prefHeight="35.0" prefWidth="37.0" text="0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding></Label>
+                        <Label fx:id="labelDificultad" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="193.0" text="DIFICULTAD" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="127.0" styleClass="ContenedorEstrellas" stylesheets="@../CSS/Stile.css">
+                           <children>
+                              <ImageView fx:id="Estrella1" fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0">
+                                 <image>
+                                    <Image url="@../img/Star_96x96-32_37882.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Estrella2" fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0">
+                                 <image>
+                                    <Image url="@../img/Star_96x96-32_37882.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Estrella3" fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0">
+                                 <image>
+                                    <Image url="@../img/Star_96x96-32_37882.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets left="-2.0" top="-12.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" prefHeight="538.0" prefWidth="700.0">
+               <children>
+                  <GridPane alignment="CENTER" hgap="5.0" prefHeight="400.0" prefWidth="500.0" vgap="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="btna1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cartaElegidaA1" prefHeight="125.0" prefWidth="125.0" textOverrun="CENTER_ELLIPSIS">
+                           <graphic>
+                              <HBox fx:id="contenedorA1" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
+                                 <children>
+                                    <Label fx:id="btnA1L1" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnA1L2" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnA1L3" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnb1" mnemonicParsing="false" onAction="#cartaElegidaB1" prefHeight="125.0" prefWidth="125.0" GridPane.columnIndex="1">
+                           <graphic>
+                              <HBox fx:id="contenedorB1" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
+                                 <children>
+                                    <Label fx:id="btnB1L1" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnB1L2" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnB1L3" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btna2" mnemonicParsing="false" onAction="#cartaElegidaA2" prefHeight="125.0" prefWidth="125.0" GridPane.rowIndex="1">
+                           <graphic>
+                              <HBox fx:id="contenedorA2" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
+                                 <children>
+                                    <Label fx:id="btnA2L1" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnA2L2" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnA2L3" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnb2" mnemonicParsing="false" onAction="#cartaElegidaB2" prefHeight="125.0" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <graphic>
+                              <HBox fx:id="contenedorB2" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
+                                 <children>
+                                    <Label fx:id="btnB2L1" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnB2L2" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnB2L3" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btna3" mnemonicParsing="false" onAction="#cartaElegidaA3" prefHeight="125.0" prefWidth="125.0" GridPane.rowIndex="2">
+                           <graphic>
+                              <HBox fx:id="contenedorA3" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
+                                 <children>
+                                    <Label fx:id="btnA3L1" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnA3L2" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnA3L3" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnb3" mnemonicParsing="false" onAction="#cartaElegidaB3" prefHeight="125.0" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <graphic>
+                              <HBox fx:id="contenedorB3" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
+                                 <children>
+                                    <Label fx:id="btnB3L1" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnB3L2" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="btnB3L3" text="0" textFill="#a1761f">
+                                       <font>
+                                          <Font name="System Bold" size="31.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="217.0" right="218.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </GridPane>
+                  <Label fx:id="Puntos" alignment="CENTER" prefHeight="43.0" prefWidth="142.0" text="0000">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
