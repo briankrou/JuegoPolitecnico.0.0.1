@@ -21,7 +21,7 @@
                   <Insets bottom="24.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="52.0" prefWidth="240.0" text="Iniciar">
+            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="52.0" prefWidth="240.0" style="-fx-background-color: red;" text="Iniciar">
                <font>
                   <Font size="25.0" />
                </font>
