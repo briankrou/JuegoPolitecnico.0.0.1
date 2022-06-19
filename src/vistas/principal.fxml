@@ -38,7 +38,7 @@
                   </HBox>
                </graphic>
             </Button>
-            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="52.0" prefWidth="240.0" style="-fx-background-color: red;" text="Iniciar">
+            <Button fx:id="btniniciar" mnemonicParsing="false" onAction="#inicarjuego" prefHeight="52.0" prefWidth="240.0" text="Iniciar">
                <font>
                   <Font size="25.0" />
                </font>
