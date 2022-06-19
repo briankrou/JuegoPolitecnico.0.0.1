@@ -6,12 +6,10 @@
 }
  
 
+
 .fondoInicio{
 
-}
-.fondoInicio{
-
-    -fx-background-color: yellowgreen;
+    -fx-background-image: url("../img/fondoinicio.jpg");
 }
 .text-area {
     -fx-background-color: opacity;
