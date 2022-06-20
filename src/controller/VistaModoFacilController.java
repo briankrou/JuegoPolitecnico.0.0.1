@@ -4,11 +4,15 @@
  */
 package controller;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +22,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.media.Media;
@@ -28,6 +33,9 @@ import juegomemoriamultiplicacion.Vistas.ComparadorDeCartas;
 import  juegomemoriamultiplicacion.Vistas.Contadores;
 import  juegomemoriamultiplicacion.Vistas.ParejaDeCartas;
 import juegomemoriamultiplicacion.Vistas.Sonidos;
+import java.io.File;
+import javafx.scene.media.MediaView;
+
 
 
 
@@ -37,6 +45,7 @@ import juegomemoriamultiplicacion.Vistas.Sonidos;
  * @author BrianKrou
  */
 public class VistaModoFacilController implements Initializable {
+
 
     @FXML
     private Label Puntos;
@@ -146,15 +155,20 @@ public class VistaModoFacilController implements Initializable {
     @FXML
     private Button btnb3;
     
+    @FXML
+    private ImageView imgbtnSonido;
+    @FXML
+    private MediaView mediaView;
+ 
     
-//valores carta
     
-    
-    
+//ISTANCIAS DE LA CLASE ParejaDeCartas x3
 ParejaDeCartas Carta1=new ParejaDeCartas();
 ParejaDeCartas Carta2=new ParejaDeCartas();
 ParejaDeCartas Carta3=new ParejaDeCartas();
 
+
+//variables que tomaran lo valores de cartas
     int a1=0;
     int a2=0;
     int a3=0;
@@ -174,17 +188,59 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
     String TextB2L1,TextB2L2="",TextB2L3;
     //texto carta B3
     String TextB3L1,TextB3L2="",TextB3L3;
+    
+    Image icon= new Image(getClass().getResourceAsStream("/img/exit.png"));
+    File img = new File("archivo.jpg");
+
+    //REPRODUCE SONIDO
   
-      Sonidos reproducir= new Sonidos();
+      Sonidos reproducir;
+
+    public VistaModoFacilController() {
+        this.reproducir = new Sonidos();
+    }
           
     @FXML
-    void reset(ActionEvent event) {
-
+    void reset(ActionEvent event) throws IOException {
+                
+                Contadores.reiniciarCartasOptenidas();
+        
+//CIERRA LA INTERFAS ACTUAL
+                                         
+                Object eventSource= event.getSource();
+                Node sourceAsNode = (Node) eventSource;
+                Scene oldScene= sourceAsNode.getScene();
+                Window window =oldScene.getWindow();
+                Stage stage =(Stage) window;
+                stage.hide();
+                
+                Parent root = FXMLLoader.load(getClass().getResource("/vistas/VistaModoFacil.fxml"));
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+                ComparadorDeCartas.reiniciarCartas();
+         
     }
-
+     boolean off=false;
+    //QUITA EL SONIDO
     @FXML
     void soudVol(ActionEvent event) {
+      
+        
+  
         Sonidos.mute();
+        
+        if(off){
+                off=false;
+                imgbtnSonido.setVisible(false);
+        }else{
+                
+                imgbtnSonido.setVisible(true);
+                off=true;
+        }
+
+        
+        
     }
     
  ////////////////////////// BOTON A1 /////////////////////////////
@@ -309,21 +365,15 @@ void cartaElegidaA3(ActionEvent event) throws IOException {
                 }else{
                     abrirVistaPerdiste(stage);
                 }
-                
-            
-                
             }
             //*******SI LAS CARTAS NO ESTAN COMPLETAS  CONTINUA EL JUEGO 
-        
 }
-
  ////////////////////////// BOTON B1 /////////////////////////////
 @FXML
 void cartaElegidaB1(ActionEvent event) throws IOException {
         if(ComparadorDeCartas.getValorCarta1()==0&&ComparadorDeCartas.getValorCarta2()==0){
             
-            ocultarCartas(); 
-        
+            ocultarCartas();
         }
     contenedorB1.setVisible(true);
     
@@ -434,24 +484,29 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
                 }else{
                     abrirVistaPerdiste(stage);
                 }
-                
             }
-            
-        
 }
 
      int contador=0;
      
     //CARGA LOS VALORES INICIALES DEL JUEGO
+          private File file;
+          private  Media media;
+          private MediaPlayer mediaPlayer;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
      //INICIA LOS VALORES DEL JUEGO
      
      System.out.print("INICIA EL NIVEL:-----> "+Contadores.getNivel());
+     
+
+     
+
+     
             //puntos acomulados
             Puntos.setText(String.valueOf(Contadores.getPuntos()));
-     
-            asiganarValorParejaDeCartas();
+            /*
+            */   asiganarValorParejaDeCartas();
             Contadores.reiciarEstrellasOptenidas();
             
   
@@ -489,6 +544,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     
      //AL HACER CLICK REALIZA  LA SIGUIENTE ACCION
     public void eventoClick(int valorCarta,String ID){
+        
              reproducir.sonido("click1");
         
         if(ComparadorDeCartas.asignarvalorCartasSeleccionadas(valorCarta,ID)){

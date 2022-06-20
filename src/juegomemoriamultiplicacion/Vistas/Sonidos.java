@@ -34,12 +34,13 @@ public class Sonidos {
             
         } catch (IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
             JOptionPane.showMessageDialog(null, "Error en audio:\n" + ex.getMessage());
-        }
-               
-
-       
+        }    
    }
+   
+   //QUITA EL SONIDO
+   
    public static void mute(){
+       
     if(sonido){
         sonido=false;
     }else{

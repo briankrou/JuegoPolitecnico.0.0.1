@@ -99,29 +99,26 @@ public class GanasteController implements Initializable  {
 
                 switch(Contadores.getDificultad()){
                 
-            case "FACIL":
+            case "FACIL" -> {
+                Parent root1 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoFacil.fxml"));
+                Scene scene1 = new Scene(root1);
+                stage.setScene(scene1);
+                stage.show();
+                }
                     
-                    Parent root1 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoFacil.fxml"));
-                    Scene scene1 = new Scene(root1);
-                    stage.setScene(scene1);
-                    stage.show();
-                    break;
+            case "MEDIO" -> {
+                Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                Scene scene2 = new Scene(root2);
+                stage.setScene(scene2);
+                stage.show();
+                }
                     
-            case "MEDIO":
-                                    
-                    Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
-                    Scene scene2 = new Scene(root2);
-                    stage.setScene(scene2);
-                    stage.show();
-                    break;
-                    
-            case "DIFICIL":
-                                    
-                    Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
-                    Scene scene3 = new Scene(root3);
-                    stage.setScene(scene3);
-                    stage.show();
-                    break;       
+            case "DIFICIL" -> {
+                Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                Scene scene3 = new Scene(root3);
+                stage.setScene(scene3);
+                stage.show();
+                }       
                     
             }  
             
@@ -155,28 +152,27 @@ public class GanasteController implements Initializable  {
         
         // TODO
         switch(Contadores.getNumeroDeEstrellas()){
-            case 3:
+            case 3 -> {
                 estrella1.setVisible(true);
                 estrella2.setVisible(true);
                 estrella3.setVisible(true);
                 estrella4.setVisible(false);
                 estrella5.setVisible(false);
-                
-                break;
-            case 4:
+            }
+            case 4 -> {
                 estrella1.setVisible(false);
                 estrella2.setVisible(true);
                 estrella3.setVisible(true);
                 estrella4.setVisible(true);
                 estrella5.setVisible(true);
-                break;
-            case 5:
+            }
+            case 5 -> {
                 estrella1.setVisible(true);
                 estrella2.setVisible(true);
                 estrella3.setVisible(true);
                 estrella4.setVisible(true);
                 estrella5.setVisible(true);
-                break;
+            }
         }
         
     }    

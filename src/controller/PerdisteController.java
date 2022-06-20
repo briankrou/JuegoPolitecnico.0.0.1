@@ -95,29 +95,26 @@ public class PerdisteController implements Initializable {
         Stage stage =(Stage) window;
         stage.hide();
         switch(Contadores.getDificultad()){
-            case "FACIL":
+            case "FACIL" -> {
+                Parent root1 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoFacil.fxml"));
+                Scene scene1 = new Scene(root1);
+                stage.setScene(scene1);
+                stage.show();
+            }
                     
-                    Parent root1 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoFacil.fxml"));
-                    Scene scene1 = new Scene(root1);
-                    stage.setScene(scene1);
-                    stage.show();
-                    break;
+            case "MEDIO" -> {
+                Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                Scene scene2 = new Scene(root2);
+                stage.setScene(scene2);
+                stage.show();
+            }
                     
-            case "MEDIO":
-                                    
-                    Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
-                    Scene scene2 = new Scene(root2);
-                    stage.setScene(scene2);
-                    stage.show();
-                    break;
-                    
-            case "DIFICIL":
-                                    
-                    Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
-                    Scene scene3 = new Scene(root3);
-                    stage.setScene(scene3);
-                    stage.show();
-                    break;       
+            case "DIFICIL" -> {
+                Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                Scene scene3 = new Scene(root3);
+                stage.setScene(scene3);
+                stage.show();
+            }       
                     
         }                                    
 
@@ -146,7 +143,10 @@ public class PerdisteController implements Initializable {
         puntos.setText(String.valueOf(Contadores.getPuntos()));
         
         switch(Contadores.getNumeroDeEstrellas()){
-            case 3:
+            
+                //MUESTRA
+            
+            case 3 -> {
                 estrellaPerdida1.setVisible(true);
                 estrellaPerdida2.setVisible(true);
                 estrellaPerdida3.setVisible(true);
@@ -154,26 +154,24 @@ public class PerdisteController implements Initializable {
                 estrellaPerdida5.setVisible(false);
                 estrella4.setVisible(false);
                 estrella5.setVisible(false);
-                
-                break;
-                
-            case 4:
-                
+            }
+                //MUESTRA 
+            
+            case 4 -> {
                 estrellaPerdida1.setVisible(false);
                 estrellaPerdida2.setVisible(true);
                 estrellaPerdida3.setVisible(true);
                 estrellaPerdida4.setVisible(true);
                 estrellaPerdida5.setVisible(true);
                 estrella1.setVisible(false);
-                
-                break;
-            case 5:
+            }
+            case 5 -> {
                 estrellaPerdida1.setVisible(true);
                 estrellaPerdida2.setVisible(true);
                 estrellaPerdida3.setVisible(true);
                 estrellaPerdida4.setVisible(true);
                 estrellaPerdida5.setVisible(true);
-                break;                
+            }                
         }
         
         if(Contadores.getNumeroDeEstrellas()==3){
