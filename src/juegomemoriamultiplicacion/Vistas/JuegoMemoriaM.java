@@ -4,11 +4,13 @@
  */
 package juegomemoriamultiplicacion.Vistas;
 
+import java.io.FileNotFoundException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 
 /**
  *
@@ -29,7 +31,8 @@ public class JuegoMemoriaM extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
+  
         launch(args);
     }
     

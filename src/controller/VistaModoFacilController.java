@@ -4,7 +4,9 @@
  */
 package controller;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -18,11 +20,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import juegomemoriamultiplicacion.Vistas.ComparadorDeCartas;
 import  juegomemoriamultiplicacion.Vistas.Contadores;
 import  juegomemoriamultiplicacion.Vistas.ParejaDeCartas;
+import juegomemoriamultiplicacion.Vistas.Sonidos;
 
 
 
@@ -170,12 +175,14 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
     //texto carta B3
     String TextB3L1,TextB3L2="",TextB3L3;
   
-    
+      Sonidos reproducir= new Sonidos();
+          
+
     
  ////////////////////////// BOTON A1 /////////////////////////////
 @FXML
 void cartaElegidaA1(ActionEvent event) throws IOException {
-   
+
          if(ComparadorDeCartas.getValorCarta1()==0&&ComparadorDeCartas.getValorCarta2()==0){
             
             ocultarCartas(); 
@@ -383,6 +390,9 @@ void cartaElegidaB2(ActionEvent event) throws IOException {
 
 @FXML
 void cartaElegidaB3(ActionEvent event) throws IOException {
+    
+    
+
         if(ComparadorDeCartas.getValorCarta1()==0&&ComparadorDeCartas.getValorCarta2()==0){
             
             ocultarCartas(); 
@@ -428,6 +438,8 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
      //INICIA LOS VALORES DEL JUEGO
+     
+     System.out.print("INICIA EL NIVEL:-----> "+Contadores.getNivel());
             //puntos acomulados
             Puntos.setText(String.valueOf(Contadores.getPuntos()));
      
@@ -469,6 +481,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     
      //AL HACER CLICK REALIZA  LA SIGUIENTE ACCION
     public void eventoClick(int valorCarta,String ID){
+             reproducir.sonido("click1");
         
         if(ComparadorDeCartas.asignarvalorCartasSeleccionadas(valorCarta,ID)){
             
@@ -541,30 +554,34 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     
    public void mostrarestrella(int num){
         switch(num){
-            case 0:
-            System.out.println("mostramos 0 estrellas");
-                  Estrella1.setVisible(false);
-                  Estrella2.setVisible(false);
-                  Estrella3.setVisible(false);   
-                  break;
-            case 1:
-            System.out.println("mostramos 1 estrella");
-                  Estrella1.setVisible(true);
-                  Estrella2.setVisible(false);
-                  Estrella3.setVisible(false);   
-                  break;
-            case 2:
-            System.out.println("mostramos 2 estrellas");
-                  Estrella1.setVisible(true);
-                  Estrella2.setVisible(true);
-                  Estrella3.setVisible(false);   
-                  break;
-            case 3:
-            System.out.println("mostramos 3 estrellas");
-                  Estrella1.setVisible(true);
-                  Estrella2.setVisible(true);
-                  Estrella3.setVisible(true);   
-                  break;
+            case 0 -> {
+                System.out.println("mostramos 0 estrellas");
+                
+                Estrella1.setVisible(false);
+                Estrella2.setVisible(false);
+                Estrella3.setVisible(false);
+            }
+            case 1 -> {
+                System.out.println("mostramos 1 estrella");
+                
+                Estrella1.setVisible(true);
+                Estrella2.setVisible(false);
+                Estrella3.setVisible(false);
+            }
+            case 2 -> {
+                System.out.println("mostramos 2 estrellas");
+                
+                Estrella1.setVisible(true);
+                Estrella2.setVisible(true);
+                Estrella3.setVisible(false);
+            }
+            case 3 -> {
+                System.out.println("mostramos 3 estrellas");
+                
+                Estrella1.setVisible(true);
+                Estrella2.setVisible(true);
+                Estrella3.setVisible(true);
+            }
       
         }
 
@@ -598,8 +615,6 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
             }
         }
     
-        Carta2.juegoNuevo(2);
-        Carta3.juegoNuevo(3);
         PosicionaCarta1(Carta1);
         PosicionaCarta1(Carta2);
         PosicionaCarta1(Carta3);
@@ -790,31 +805,13 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     public void eliminarCarta1(){
         System.out.println("Elimina carta 1 con ID: "+ComparadorDeCartas.getIDcarta1());
         switch(ComparadorDeCartas.getIDcarta1()){
-            case "a1":
-          
-               btna1.setVisible(false);
-               break;
-            case "a2":
-                
-                btna2.setVisible(false);
-                break;
-            case "a3":
-               
-                btna3.setVisible(false);
-                break;
-            case "b1":
-                
-                btnb1.setVisible(false);
-                break;
-            case "b2":
-                
-                btnb2.setVisible(false);
-                break;
-        
-            case "b3":
-               
-                 btnb3.setVisible(false);
-                break;
+            
+            case "a1" -> btna1.setVisible(false);
+            case "a2" -> btna2.setVisible(false);
+            case "a3" -> btna3.setVisible(false);
+            case "b1" -> btnb1.setVisible(false);
+            case "b2" -> btnb2.setVisible(false);   
+            case "b3" -> btnb3.setVisible(false);
                
         }
     }
@@ -824,24 +821,14 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     public void eliminarCarta2(){
            System.out.println("Elimina carta 2 con ID: "+ComparadorDeCartas.getIDcarta2());
         switch(ComparadorDeCartas.getIDcarta2()){
-            case "a1":
-                btna1.setVisible(false);
-                break;
-            case "a2":
-                btna2.setVisible(false);
-                break;
-            case "a3":
-                btna3.setVisible(false);
-                break;
-            case "b1":
-                btnb1.setVisible(false);
-                break;
-            case "b2":
-                btnb2.setVisible(false);
-                break;
-            case "b3":
-                btnb3.setVisible(false);
-                break;
+            
+            case "a1" -> btna1.setVisible(false);
+            case "a2" -> btna2.setVisible(false);
+            case "a3" -> btna3.setVisible(false);
+            case "b1" -> btnb1.setVisible(false);
+            case "b2" -> btnb2.setVisible(false);
+            case "b3" -> btnb3.setVisible(false);
+            
         }
         
     }
