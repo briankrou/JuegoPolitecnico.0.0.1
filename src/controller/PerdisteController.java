@@ -19,6 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import juegomemoriamultiplicacion.Vistas.Contadores;
+import juegomemoriamultiplicacion.Vistas.Sonidos;
 
 
 /**
@@ -27,6 +28,8 @@ import juegomemoriamultiplicacion.Vistas.Contadores;
  * @author BrianKrou
  */
 public class PerdisteController implements Initializable {
+    
+    Sonidos reproducir = new Sonidos();
         @FXML
     private Label puntos;
 
@@ -59,6 +62,7 @@ public class PerdisteController implements Initializable {
 
     @FXML
     private ImageView estrellaPerdida5;
+    
     
         @FXML
     void Exit(ActionEvent event) throws IOException {
@@ -128,6 +132,8 @@ public class PerdisteController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //sonido
+        reproducir.sonido("gano");
 
 
         //reiniciar cartas optenidas

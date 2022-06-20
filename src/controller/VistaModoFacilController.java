@@ -177,7 +177,15 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
   
       Sonidos reproducir= new Sonidos();
           
+    @FXML
+    void reset(ActionEvent event) {
 
+    }
+
+    @FXML
+    void soudVol(ActionEvent event) {
+        Sonidos.mute();
+    }
     
  ////////////////////////// BOTON A1 /////////////////////////////
 @FXML
@@ -522,6 +530,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     
     //si las cartas NO son iguales realiza la sieguiente accion
     public void NoSonIguales(){
+        reproducir.sonido("perdio");
         
         System.out.println("No son iguales");
         Contadores.disminuirNumeroDeEstrellasOptenidas();

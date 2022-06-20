@@ -21,6 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import juegomemoriamultiplicacion.Vistas.Sonidos;
 
  
 
@@ -30,6 +31,8 @@ import javafx.stage.Window;
  * @author BrianKrou
  */
 public class GanasteController implements Initializable  {
+    
+    Sonidos reproducir=new Sonidos();
     @FXML
     private Label puntos;
    
@@ -135,6 +138,9 @@ public class GanasteController implements Initializable  {
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+         reproducir.sonido("gano");
+        
         
 
         //reiniciar cartas optenidas

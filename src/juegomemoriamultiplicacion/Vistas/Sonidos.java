@@ -22,16 +22,29 @@ public class Sonidos {
  
     static public Clip clip;
     static public String ruta = "/Sound/";
+    static boolean sonido=true;
    
    public  void sonido(String archivo){
                try {
             clip = AudioSystem.getClip();
             clip.open(AudioSystem.getAudioInputStream(getClass().getResource(ruta + archivo + ".wav")));
-            clip.start();
+            if(sonido){
+                clip.start();
+            }
+            
         } catch (IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
             JOptionPane.showMessageDialog(null, "Error en audio:\n" + ex.getMessage());
         }
+               
 
+       
+   }
+   public static void mute(){
+    if(sonido){
+        sonido=false;
+    }else{
+        sonido=true;
+    }
        
    }
    
