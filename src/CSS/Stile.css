@@ -13,6 +13,11 @@
 {
  -fx-background-image: url("../img/fondo1.jpg");   
 }
+.fondoNavi
+{
+    -fx-background-image: url("../img/nav2.jpg"); 
+    
+}
 .btnPrincipal
 {
     -fx-border-width: 2;

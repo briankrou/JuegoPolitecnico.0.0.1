@@ -12,7 +12,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaModoFacilController">
@@ -21,22 +23,38 @@
          <children>
             <Pane prefHeight="62.0" prefWidth="612.0">
                <children>
-                  <HBox alignment="CENTER" layoutX="-6.0" prefHeight="62.0" prefWidth="708.0">
+                  <HBox alignment="CENTER" layoutX="-8.0" prefHeight="62.0" prefWidth="708.0" styleClass="fondoNavi" stylesheets="@../CSS/Stile.css">
                      <children>
-                        <Label prefHeight="51.0" prefWidth="103.0" text="NIVEL:" textFill="#8601d3">
+                        <Label prefHeight="51.0" prefWidth="103.0" text="NIVEL:">
                            <font>
-                              <Font name="System Bold" size="26.0" />
-                           </font></Label>
-                        <Label fx:id="Nivel" contentDisplay="CENTER" prefHeight="35.0" prefWidth="37.0" text="0" textAlignment="CENTER" textFill="#8601d3" textOverrun="CENTER_ELLIPSIS">
+                              <Font name="System Bold Italic" size="26.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startY="0.6777251184834123">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.8941176533699036" green="0.5647059082984924" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label fx:id="Nivel" contentDisplay="CENTER" prefHeight="35.0" prefWidth="37.0" text="0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                            <font>
-                              <Font name="System Bold" size="26.0" />
+                              <Font size="26.0" />
                            </font>
                            <padding>
                               <Insets left="12.0" />
                            </padding></Label>
-                        <Label fx:id="labelDificultad" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="193.0" text="DIFICULTAD" textAlignment="CENTER" textFill="#17ae00" textOverrun="CENTER_ELLIPSIS">
+                        <Label fx:id="labelDificultad" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="193.0" text="DIFICULTAD" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                            <font>
-                              <Font name="System Bold" size="28.0" />
+                              <Font name="System Bold Italic" size="26.0" />
                            </font></Label>
                         <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="127.0" styleClass="ContenedorEstrellas" stylesheets="@../CSS/Stile.css">
                            <children>
@@ -254,15 +272,30 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <Label fx:id="Puntos" alignment="CENTER" prefHeight="43.0" prefWidth="142.0" text="0000" textFill="#cd1515">
+                  <Label fx:id="Puntos" alignment="CENTER" prefHeight="43.0" prefWidth="142.0" text="0000">
                      <font>
                         <Font name="System Bold" size="54.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" startX="0.3933649289099526">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8941176533699036" green="0.5647059082984924" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
                </children>
             </VBox>
          </children>
       </VBox>
-      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
    </children>
 </AnchorPane>

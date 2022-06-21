@@ -12,6 +12,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
@@ -20,14 +23,30 @@
          <children>
             <Pane prefHeight="62.0" prefWidth="612.0">
                <children>
-                  <HBox alignment="CENTER" layoutX="2.0" prefHeight="62.0" prefWidth="696.0">
+                  <HBox alignment="CENTER" prefHeight="62.0" prefWidth="700.0" styleClass="fondoNavi" stylesheets="@../CSS/Stile.css">
                      <children>
-                        <Label prefHeight="35.0" prefWidth="79.0" text="NIVEL:">
+                        <Label prefHeight="35.0" prefWidth="93.0" text="NIVEL :">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="System Bold Italic" size="24.0" />
                            </font>
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.7630331753554502" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.8941176533699036" green="0.5647059082984924" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
                         </Label>
-                        <Label fx:id="Nivel" contentDisplay="CENTER" prefHeight="35.0" prefWidth="37.0" text="0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                        <Label fx:id="Nivel" contentDisplay="CENTER" prefHeight="35.0" prefWidth="37.0" text="0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -35,9 +54,9 @@
                               <Insets left="12.0" />
                            </padding>
                         </Label>
-                        <Label fx:id="labelDificultad" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="193.0" text="DIFICULTAD" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                        <Label fx:id="labelDificultad" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="193.0" text="DIFICULTAD" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="System Bold Italic" size="24.0" />
                            </font>
                         </Label>
                         <ImageView fx:id="Estrella1" fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
