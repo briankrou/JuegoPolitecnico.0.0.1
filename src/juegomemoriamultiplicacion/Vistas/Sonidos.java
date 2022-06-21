@@ -23,7 +23,9 @@ public class Sonidos {
     static public Clip clip;
     static public String ruta = "/Sound/";
     static boolean sonido=true;
-   
+   public  static boolean getSonido(){
+       return sonido;
+   }
    public  void sonido(String archivo){
                try {
             clip = AudioSystem.getClip();

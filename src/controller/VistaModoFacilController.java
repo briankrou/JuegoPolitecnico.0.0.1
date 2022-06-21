@@ -226,22 +226,32 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
     @FXML
     void soudVol(ActionEvent event) {
       
-        
-  
         Sonidos.mute();
         
         if(off){
+            
+             sonido();
                 off=false;
-                imgbtnSonido.setVisible(false);
+                
+                
         }else{
                 
-                imgbtnSonido.setVisible(true);
+              sonido();    
                 off=true;
         }
 
         
         
     }
+    public void sonido(){
+    
+        if(Sonidos.getSonido()){
+            imgbtnSonido.setVisible(false);
+        }else{
+            imgbtnSonido.setVisible(true);
+        }
+    }
+    
     
  ////////////////////////// BOTON A1 /////////////////////////////
 @FXML
@@ -495,6 +505,9 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
           private MediaPlayer mediaPlayer;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
+          sonido();
      //INICIA LOS VALORES DEL JUEGO
      
      System.out.print("INICIA EL NIVEL:-----> "+Contadores.getNivel());

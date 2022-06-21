@@ -1,40 +1,53 @@
 
-.fondo{
-    
+.fondo
+{
     -fx-background-image: url("../img/pp.jpg");
-    
 }
- 
-
-.fondoInicio{
-
+.fondoInicio
+{
+    -fx-background-image: url("../img/fondoinicio.jpg");
 }
-.fondoInicio{
-
-    -fx-background-color: blue;
-}
-.text-area {
-    -fx-background-color: opacity;
-}
-
-.text-area .scroll-pane {
+.btnPrincipal
+{
+    -fx-border-width: 2;
     -fx-background-color: transparent;
 }
-.cartaFrente{
-        -fx-background-image: url("../img/tarjeta.png");
-        -fx-background-size: 100%;
-    
+.btnPrincipal:hover
+{
+    -fx-border-width: 2;
+    -fx-border-color: green;
 }
-.ContenedorEstrellas{
+.text-area 
+{
+    -fx-background-color: opacity;
+}
+.text-area .scroll-pane 
+{
+    -fx-background-color: transparent;
+}
+.cartaFrente
+{
+    -fx-background-image: url("../img/tarjeta.png");
+    -fx-background-size: 100%;
+}
+.ContenedorEstrellas
+{
     -fx-background-image: url("../img/barraestrellas.png");
     -fx-background-size: 100%;
     -fx-background-repeat: no-repeat;
 }
-.text-area .scroll-pane .viewport{
+.text-area .scroll-pane .viewport
+{
+    
     -fx-background-color: transparent;
 }
-
-
-.text-area .scroll-pane .content{
+.text-area .scroll-pane .content
+{
+    -fx-background-color: transparent;
+}
+.btnSonido{
+     -fx-background-color: transparent;
+}
+.imgbtnSonido{
     -fx-background-color: transparent;
 }
