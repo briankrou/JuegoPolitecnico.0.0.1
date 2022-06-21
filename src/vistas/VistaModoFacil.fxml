@@ -67,7 +67,7 @@
                   </HBox>
                </children>
             </Pane>
-            <VBox alignment="CENTER" prefHeight="538.0" prefWidth="700.0">
+            <VBox alignment="CENTER" prefHeight="538.0" prefWidth="700.0" styleClass="fondoNiveles" stylesheets="@../CSS/Stile.css">
                <children>
                   <VBox prefHeight="467.0" prefWidth="700.0">
                      <children>
@@ -227,7 +227,7 @@
                                     <Insets top="5.0" />
                                  </padding>
                               </GridPane>
-                              <Pane prefHeight="467.0" prefWidth="220.0">
+                              <Pane prefHeight="467.0" prefWidth="220.0" styleClass="fondo1">
                                  <children>
                                     <Button fx:id="reiniciar" layoutX="96.0" layoutY="124.0" mnemonicParsing="false" onAction="#reset" prefHeight="54.0" prefWidth="52.0" text="R" />
                                     <Button fx:id="mute" layoutX="96.0" layoutY="234.0" mnemonicParsing="false" onAction="#soudVol" prefHeight="54.0" prefWidth="52.0" styleClass="btnSonido" stylesheets="@../CSS/Stile.css">

@@ -69,7 +69,7 @@
                   </HBox>
                </children>
             </Pane>
-            <VBox alignment="CENTER" prefHeight="538.0" prefWidth="700.0">
+            <VBox alignment="CENTER" prefHeight="538.0" prefWidth="700.0" styleClass="fondoNiveles" stylesheets="@../CSS/Stile.css">
                <children>
                   <GridPane alignment="CENTER" hgap="5.0" prefHeight="406.0" prefWidth="362.0" vgap="5.0">
                      <columnConstraints>

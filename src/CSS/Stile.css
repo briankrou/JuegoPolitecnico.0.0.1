@@ -3,9 +3,15 @@
 {
     -fx-background-image: url("../img/pp.jpg");
 }
+
 .fondoInicio
 {
     -fx-background-image: url("../img/fondoinicio.jpg");
+}
+
+.fondoNiveles
+{
+ -fx-background-image: url("../img/fondo1.jpg");   
 }
 .btnPrincipal
 {
