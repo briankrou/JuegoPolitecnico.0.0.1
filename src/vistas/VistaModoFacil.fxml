@@ -102,7 +102,7 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button fx:id="btna1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cartaElegidaA1" prefHeight="125.0" prefWidth="125.0" textOverrun="CENTER_ELLIPSIS">
+                                    <Button fx:id="btna1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cartaElegidaA1" prefHeight="125.0" prefWidth="125.0" styleClass="cartAtras" stylesheets="@../CSS/Stile.css" textOverrun="CENTER_ELLIPSIS">
                                        <graphic>
                                           <HBox fx:id="contenedorA1" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
                                              <children>
@@ -125,7 +125,7 @@
                                           </HBox>
                                        </graphic>
                                     </Button>
-                                    <Button fx:id="btnb1" mnemonicParsing="false" onAction="#cartaElegidaB1" prefHeight="125.0" prefWidth="125.0" GridPane.columnIndex="1">
+                                    <Button fx:id="btnb1" mnemonicParsing="false" onAction="#cartaElegidaB1" prefHeight="125.0" prefWidth="198.0" styleClass="cartAtras" stylesheets="@../CSS/Stile.css" GridPane.columnIndex="1">
                                        <graphic>
                                           <HBox fx:id="contenedorB1" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
                                              <children>
@@ -148,7 +148,7 @@
                                           </HBox>
                                        </graphic>
                                     </Button>
-                                    <Button fx:id="btna2" mnemonicParsing="false" onAction="#cartaElegidaA2" prefHeight="125.0" prefWidth="125.0" GridPane.rowIndex="1">
+                                    <Button fx:id="btna2" mnemonicParsing="false" onAction="#cartaElegidaA2" prefHeight="125.0" prefWidth="125.0" styleClass="cartAtras" stylesheets="@../CSS/Stile.css" GridPane.rowIndex="1">
                                        <graphic>
                                           <HBox fx:id="contenedorA2" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
                                              <children>
@@ -171,7 +171,7 @@
                                           </HBox>
                                        </graphic>
                                     </Button>
-                                    <Button fx:id="btnb2" mnemonicParsing="false" onAction="#cartaElegidaB2" prefHeight="125.0" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Button fx:id="btnb2" mnemonicParsing="false" onAction="#cartaElegidaB2" prefHeight="125.0" prefWidth="125.0" styleClass="cartAtras" stylesheets="@../CSS/Stile.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <graphic>
                                           <HBox fx:id="contenedorB2" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
                                              <children>
@@ -194,7 +194,7 @@
                                           </HBox>
                                        </graphic>
                                     </Button>
-                                    <Button fx:id="btna3" mnemonicParsing="false" onAction="#cartaElegidaA3" prefHeight="125.0" prefWidth="125.0" GridPane.rowIndex="2">
+                                    <Button fx:id="btna3" mnemonicParsing="false" onAction="#cartaElegidaA3" prefHeight="125.0" prefWidth="125.0" styleClass="cartAtras" GridPane.rowIndex="2">
                                        <graphic>
                                           <HBox fx:id="contenedorA3" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
                                              <children>
@@ -217,7 +217,7 @@
                                           </HBox>
                                        </graphic>
                                     </Button>
-                                    <Button fx:id="btnb3" mnemonicParsing="false" onAction="#cartaElegidaB3" prefHeight="125.0" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <Button fx:id="btnb3" mnemonicParsing="false" onAction="#cartaElegidaB3" prefHeight="125.0" prefWidth="125.0" styleClass="cartAtras" stylesheets="@../CSS/Stile.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <graphic>
                                           <HBox fx:id="contenedorB3" alignment="CENTER" prefHeight="71.0" prefWidth="123.0" styleClass="cartaFrente" stylesheets="@../CSS/Stile.css">
                                              <children>

@@ -11,13 +11,32 @@
 
 .fondoNiveles
 {
- -fx-background-image: url("../img/fondo1.jpg");   
+ -fx-background-image: url("../img/fondo1.jpg"); 
+ -fx-background-size: 100%;
 }
 .fondoNavi
 {
     -fx-background-image: url("../img/nav2.jpg"); 
     
 }
+.fondoGanaste
+{
+    -fx-background-image: url("../img/ganaste.png"); 
+    -fx-background-size: 100%;
+    
+}
+.cartAtras{
+    -fx-background-image: url("../img/card.png"); 
+    -fx-background-size: 100%;
+    
+
+    
+}
+.imgReiniciar{
+    -fx-background-image: url("../img/reinit.png"); 
+    -fx-background-size: 100%;
+}
+
 .btnPrincipal
 {
     -fx-border-width: 2;
