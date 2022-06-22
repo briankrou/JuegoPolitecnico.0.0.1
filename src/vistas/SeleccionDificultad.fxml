@@ -16,7 +16,7 @@
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btndificil" disable="true" layoutX="251.0" layoutY="264.0" mnemonicParsing="false" onAction="#entrardificil" text="DIFICIL">
+      <Button fx:id="btndificil" layoutX="251.0" layoutY="264.0" mnemonicParsing="false" onAction="#entrardificil" text="DIFICIL">
          <font>
             <Font size="22.0" />
          </font>

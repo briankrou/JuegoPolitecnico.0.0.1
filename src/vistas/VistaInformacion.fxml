@@ -9,7 +9,7 @@
 <AnchorPane prefHeight="500.0" prefWidth="600.0" styleClass="fondoInformacion" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaInformacionController">
    <children>
       <TextArea accessibleRole="BUTTON" editable="false" layoutX="31.0" layoutY="2.0" mouseTransparent="true" pickOnBounds="false" prefHeight="500.0" prefWidth="539.0" styleClass="fondoInformacion2" stylesheets="@../CSS/Stile.css" text=" &#10;&#10;&#10;&#10;" />
-      <Button fx:id="salir" layoutX="237.0" layoutY="336.0" mnemonicParsing="false" onAction="#Exit" prefHeight="51.0" prefWidth="127.0" text="Regresar" />
+      <Button fx:id="salir" layoutX="502.0" layoutY="218.0" mnemonicParsing="false" onAction="#Exit" prefHeight="51.0" prefWidth="68.0" text="salir" />
       <Label layoutX="190.0" layoutY="85.0" prefHeight="51.0" prefWidth="231.0" text="INFORMACIÓN DEL JUEGO">
          <font>
             <Font name="System Bold Italic" size="18.0" />

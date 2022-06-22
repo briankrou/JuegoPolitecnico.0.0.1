@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -24,30 +25,18 @@ import javafx.stage.Window;
  * @author BrianKrou
  */
 public class principalController implements Initializable {
-        @FXML
-    private Button btnInformacion;
-
-    @FXML
-    private Button btniniciar;
-
-    @FXML
-    private Label label;
     @FXML
     void abrirInformacion(ActionEvent event) throws IOException {
         
-        System.out.print("funciona nnn");
-       Object eventSource= event.getSource();
-       Node sourceAsNode = (Node) eventSource;
-       Scene oldScene= sourceAsNode.getScene();
-       Window window =oldScene.getWindow();
-       Stage stage =(Stage) window;
-       stage.hide();
 
-        
-        Parent root = FXMLLoader.load(getClass().getResource("/vistas/VistaInformacion.fxml"));
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("/vistas/VistaInformacion.fxml"));
+        Parent root =loader.load();
+        VistaInformacionController controlador = loader.getController();
         Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
-        stage.show();
+        stage.showAndWait();
     }
     
     @FXML

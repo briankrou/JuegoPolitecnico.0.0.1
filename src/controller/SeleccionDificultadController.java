@@ -40,7 +40,7 @@ public class SeleccionDificultadController implements Initializable {
        stage.hide();
        
        
-        Parent root = FXMLLoader.load(getClass().getResource("/vistas/VistaModoDificil.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("/vistas/VistaModoDificil.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

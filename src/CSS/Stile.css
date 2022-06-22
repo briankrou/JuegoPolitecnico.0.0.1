@@ -97,3 +97,6 @@
 .imgbtnSonido{
     -fx-background-color: transparent;
 }
+.btnsonido_img{
+    -fx-background-color: red;
+}

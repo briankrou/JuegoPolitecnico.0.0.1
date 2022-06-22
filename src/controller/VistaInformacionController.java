@@ -33,11 +33,6 @@ public class VistaInformacionController implements Initializable {
        Stage stage =(Stage) window;
        stage.hide();
        
-       Parent root = FXMLLoader.load(getClass().getResource("/vistas/principal.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

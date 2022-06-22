@@ -25,8 +25,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import juegomemoriamultiplicacion.Vistas.ComparadorDeCartas;
@@ -35,6 +33,7 @@ import  juegomemoriamultiplicacion.Vistas.ParejaDeCartas;
 import juegomemoriamultiplicacion.Vistas.Sonidos;
 import java.io.File;
 import javafx.scene.media.MediaView;
+import javafx.stage.Modality;
 
 
 
@@ -157,8 +156,7 @@ public class VistaModoFacilController implements Initializable {
     
     @FXML
     private ImageView imgbtnSonido;
-    @FXML
-    private MediaView mediaView;
+
  
     
     
@@ -172,6 +170,7 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
     int a1=0;
     int a2=0;
     int a3=0;
+    
     int b1=0;
     int b2=0;
     int b3=0;
@@ -189,6 +188,7 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
     //texto carta B3
     String TextB3L1,TextB3L2="",TextB3L3;
     
+    
     Image icon= new Image(getClass().getResourceAsStream("/img/exit.png"));
     File img = new File("archivo.jpg");
 
@@ -199,14 +199,10 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
     public VistaModoFacilController() {
         this.reproducir = new Sonidos();
     }
-          
-    @FXML
-    void reset(ActionEvent event) throws IOException {
-                
-                Contadores.reiniciarCartasOptenidas();
-        
-//CIERRA LA INTERFAS ACTUAL
-                                         
+        @FXML
+    void RegresarInicio(ActionEvent event) throws IOException {
+                                //CIERRA LA INTERFAS ACTUAL
+                                            
                 Object eventSource= event.getSource();
                 Node sourceAsNode = (Node) eventSource;
                 Scene oldScene= sourceAsNode.getScene();
@@ -214,11 +210,27 @@ ParejaDeCartas Carta3=new ParejaDeCartas();
                 Stage stage =(Stage) window;
                 stage.hide();
                 
-                Parent root = FXMLLoader.load(getClass().getResource("/vistas/VistaModoFacil.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/vistas/principal.fxml"));
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-                ComparadorDeCartas.reiniciarCartas();
+                
+              Contadores.reiniciarNivel();
+              Contadores.reiniciarCartasOptenidas();
+              
+    }
+          
+    @FXML
+    void abrirInformacion(ActionEvent event) throws IOException {
+                
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("/vistas/VistaInformacion.fxml"));
+        Parent root =loader.load();
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.showAndWait();
          
     }
      boolean off=false;
@@ -500,9 +512,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
      int contador=0;
      
     //CARGA LOS VALORES INICIALES DEL JUEGO
-          private File file;
-          private  Media media;
-          private MediaPlayer mediaPlayer;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -604,7 +614,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
         System.out.println("No son iguales");
         Contadores.disminuirNumeroDeEstrellasOptenidas();
         mostrarestrella(Contadores.getEstrellasOptenidas());
-       Contadores.RestarPuntos();
+        Contadores.RestarPuntos();
         Puntos.setText(String.valueOf(Contadores.getPuntos()));
         ComparadorDeCartas.reiniciarCartas();
  
@@ -622,8 +632,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
         eliminarCarta1();
         eliminarCarta2();
         Contadores.SumarPuntos();
-
-         Puntos.setText(String.valueOf(Contadores.getPuntos()));
+        Puntos.setText(String.valueOf(Contadores.getPuntos()));
         ComparadorDeCartas.reiniciarCartas();
         
     }
