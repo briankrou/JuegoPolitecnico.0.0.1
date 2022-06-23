@@ -41,6 +41,8 @@ public class VistaModoDificilController implements Initializable {
 
     @FXML
     private Label Puntos;
+    
+    
      @FXML
     private HBox contenedorA1;
 
@@ -526,6 +528,7 @@ ParejaDeCartas Carta10=new ParejaDeCartas();
      @FXML
     void RegresarInicio(ActionEvent event) throws IOException {
                                 //CIERRA LA INTERFAS ACTUAL
+                                
                                             
                 Object eventSource= event.getSource();
                 Node sourceAsNode = (Node) eventSource;
@@ -725,6 +728,7 @@ void cartaElegidaA4(ActionEvent event) throws IOException {
         
         }
     contenedorA4.setVisible(true);
+
     
    
 //--------------VALORES DE LA CARTA------//   
@@ -1599,22 +1603,22 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
                 Estrella5.setVisible(false);
             }
             case 4 -> {
-                System.out.println("mostramos 3 estrellas");
+                System.out.println("mostramos 4 estrellas");
                 
                 Estrella1.setVisible(true);
                 Estrella2.setVisible(true);
                 Estrella3.setVisible(true);
-                Estrella4.setVisible(false);
+                Estrella4.setVisible(true);
                 Estrella5.setVisible(false);    
             }
             case 5 -> {
-                System.out.println("mostramos 3 estrellas");
+                System.out.println("mostramos 5 estrellas");
                 
                 Estrella1.setVisible(true);
                 Estrella2.setVisible(true);
                 Estrella3.setVisible(true);
-                Estrella4.setVisible(false);
-                Estrella5.setVisible(false);    
+                Estrella4.setVisible(true);
+                Estrella5.setVisible(true);    
             }
       
         }
@@ -1630,47 +1634,97 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
         int numero;
         
       
-        while(n<3){
+        while(n<10){
             numero=Contadores.numeroaleatorio(10)+1;
             if(Carta1.getNumero2()==0){
                 Carta1.juegoNuevo(numero);
+                PosicionaCarta1(Carta1);
                 n++;
             }else{
                 if(Carta1.getNumero2()!=numero){
                     if(Carta2.getNumero2()==0){
                         Carta2.juegoNuevo(numero);
+                         PosicionaCarta1(Carta2);
                         n++;
                     }else{
                         if(Carta2.getNumero2()!=numero){
                            if(Carta3.getNumero2()==0){
                                 Carta3.juegoNuevo(numero);
+                                PosicionaCarta1(Carta3);
                                 n++;
-                           }
+                           }else{
+                               if(Carta3.getNumero2()!=numero){
+                                    if(Carta4.getNumero2()==0){
+                                        Carta4.juegoNuevo(numero);
+                                        PosicionaCarta1(Carta4);
+                                        n++;                         
+                                    }else{
+                                        if(Carta4.getNumero2()!=numero){
+                                            if(Carta5.getNumero2()==0){
+                                                Carta5.juegoNuevo(numero);
+                                                PosicionaCarta1(Carta5);
+                                                n++;
+                                            }else{
+                                                if(Carta5.getNumero2()!=numero){
+                                                    if(Carta6.getNumero2()==0){
+                                                         Carta6.juegoNuevo(numero);
+                                                         PosicionaCarta1(Carta6);
+                                                         n++;
+                                                    }else{
+                                                        if(Carta6.getNumero2()!=numero){
+                                                            if(Carta7.getNumero2()==0){
+                                                                Carta7.juegoNuevo(numero);
+                                                                PosicionaCarta1(Carta7);
+                                                                n++;
+                                                            }else{
+                                                                if(Carta7.getNumero2()!=numero){
+                                                                    if(Carta8.getNumero2()==0){
+                                                                        Carta8.juegoNuevo(numero);
+                                                                        PosicionaCarta1(Carta8);
+                                                                        n++;
+                                                                    }else{
+                                                                        if(Carta8.getNumero2()!=numero){
+                                                                            if(Carta9.getNumero2()==0){
+                                                                                Carta9.juegoNuevo(numero);
+                                                                                PosicionaCarta1(Carta9);
+                                                                                n++;
+                                                                            }else{
+                                                                                if(Carta9.getNumero2()!=numero){
+                                                                                    if(Carta10.getNumero2()==0){
+                                                                                    Carta10.juegoNuevo(numero);
+                                                                                    PosicionaCarta1(Carta10);
+                                                                                    n++;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-    Carta4.juegoNuevo(1);
-     Carta5.juegoNuevo(5);
-      Carta6.juegoNuevo(4);
-       Carta7.juegoNuevo(6);
-        Carta8.juegoNuevo(8);
-         Carta9.juegoNuevo(2);
-          Carta10.juegoNuevo(5);
-    
-    
-    
-        PosicionaCarta1(Carta1);
-        PosicionaCarta1(Carta2);
-        PosicionaCarta1(Carta3);
-        PosicionaCarta1(Carta4);
-        PosicionaCarta1(Carta5);
-        PosicionaCarta1(Carta6);
-        PosicionaCarta1(Carta7);
-        PosicionaCarta1(Carta8);
-        PosicionaCarta1(Carta9);
-        PosicionaCarta1(Carta10);
+        
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
   
 }
   //posiciona carta1 que es la que solo tiene la operacion

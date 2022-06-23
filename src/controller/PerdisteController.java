@@ -181,19 +181,43 @@ public class PerdisteController implements Initializable {
                     estrella1.setVisible(false);
                     estrella2.setVisible(false);
                     estrella3.setVisible(false);
+                    estrella4.setVisible(false);
+                    estrella5.setVisible(false);
+                    break;
                 case 1:
-                    estrella1.setVisible(false);
+                    estrella1.setVisible(true);
                     estrella2.setVisible(false);
-                    estrella3.setVisible(true);
-                    estrellaPerdida3.setVisible(false);     
+                    estrella3.setVisible(false);
+                    estrella4.setVisible(false);
+                    estrella5.setVisible(false);
                     break;
                 case 2:
                     estrella1.setVisible(true);
                     estrella2.setVisible(true);
                     estrella3.setVisible(false);
-                    estrellaPerdida1.setVisible(false);
-                    estrellaPerdida2.setVisible(false);
-                    estrellaPerdida3.setVisible(true);
+                    estrella4.setVisible(false);
+                    estrella5.setVisible(false);
+                    break;
+                case 3:
+                    estrella1.setVisible(true);
+                    estrella2.setVisible(true);
+                    estrella3.setVisible(true);
+                    estrella4.setVisible(false);
+                    estrella5.setVisible(false);
+                    break;
+                case 4:
+                    estrella1.setVisible(true);
+                    estrella2.setVisible(true);
+                    estrella3.setVisible(true);
+                    estrella4.setVisible(false);
+                    estrella5.setVisible(false);
+                    break;
+                case 5:
+                    estrella1.setVisible(true);
+                    estrella2.setVisible(true);
+                    estrella3.setVisible(true);
+                    estrella4.setVisible(true);
+                    estrella5.setVisible(true);
                     break;
                     
      
