@@ -5,14 +5,28 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="502.0" styleClass="fondoInicio" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principalController">
-    <children>
-      <VBox alignment="CENTER" layoutX="140.0" layoutY="48.0" prefHeight="321.0" prefWidth="243.0">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principalController">
+   <left>
+      <Pane prefHeight="237.0" prefWidth="115.0" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <Pane prefHeight="77.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Pane prefHeight="86.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <Pane prefHeight="237.0" prefWidth="116.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox alignment="CENTER" prefHeight="225.0" prefWidth="283.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="btnInformacion" mnemonicParsing="false" onAction="#abrirInformacion" prefHeight="60.0" prefWidth="240.0" styleClass="btnPrincipal">
                <font>
@@ -43,7 +57,7 @@
                   <Font size="25.0" />
                </font>
                <VBox.margin>
-                  <Insets />
+                  <Insets bottom="27.0" />
                </VBox.margin>
                <graphic>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="191.0" stylesheets="@../CSS/Stile.css">
@@ -62,6 +76,9 @@
                            </HBox.margin>
                         </ImageView>
                      </children>
+                     <opaqueInsets>
+                        <Insets bottom="24.0" />
+                     </opaqueInsets>
                   </HBox>
                </graphic>
             </Button>
@@ -91,5 +108,5 @@
             </Button>
          </children>
       </VBox>
-    </children>
-</AnchorPane>
+   </center>
+</BorderPane>

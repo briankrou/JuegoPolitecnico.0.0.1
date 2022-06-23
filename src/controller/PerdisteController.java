@@ -129,6 +129,8 @@ public class PerdisteController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+
         //sonido
         reproducir.sonido("gano");
 
@@ -147,23 +149,21 @@ public class PerdisteController implements Initializable {
                 //MUESTRA
             
             case 3 -> {
-                estrellaPerdida1.setVisible(true);
                 estrellaPerdida2.setVisible(true);
                 estrellaPerdida3.setVisible(true);
-                estrellaPerdida4.setVisible(false);
+                estrellaPerdida4.setVisible(true);
+                estrellaPerdida1.setVisible(false);
                 estrellaPerdida5.setVisible(false);
-                estrella4.setVisible(false);
-                estrella5.setVisible(false);
             }
                 //MUESTRA 
             
             case 4 -> {
-                estrellaPerdida1.setVisible(false);
+                estrellaPerdida1.setVisible(true);
+                estrellaPerdida3.setVisible(false);
                 estrellaPerdida2.setVisible(true);
-                estrellaPerdida3.setVisible(true);
                 estrellaPerdida4.setVisible(true);
                 estrellaPerdida5.setVisible(true);
-                estrella1.setVisible(false);
+              
             }
             case 5 -> {
                 estrellaPerdida1.setVisible(true);
@@ -174,57 +174,136 @@ public class PerdisteController implements Initializable {
             }                
         }
         
-        if(Contadores.getNumeroDeEstrellas()==3){
-              switch(Contadores.getEstrellasFinales()){
+      
+            
+            if(Contadores.getNumeroDeEstrellas()==3){
+               
+                 switch(Contadores.getEstrellasFinales()){
+                     
                   
-                case 0:
+                case 0 -> {
+                    estrella1.setVisible(false); 
+                    estrella2.setVisible(false);
+                    estrella3.setVisible(false);
+                    estrella4.setVisible(false);  
+                    estrella5.setVisible(false); 
+                }
+                case 1 -> {
+                    estrella1.setVisible(false); 
+                    estrella2.setVisible(true);
+                    estrella3.setVisible(false);
+                    estrella4.setVisible(false); 
+                    estrella5.setVisible(false); 
+                }
+                case 2 -> {
+                    estrella1.setVisible(false); 
+                    estrella2.setVisible(true);
+                    estrella3.setVisible(true);
+                    estrella4.setVisible(false); 
+                    estrella5.setVisible(false); 
+                }
+              
+            }
+            }
+            if(Contadores.getNumeroDeEstrellas()==4){ 
+                
+              
+                 switch(Contadores.getEstrellasFinales()){
+                  
+                case 0 -> {
+                   
                     estrella1.setVisible(false);
                     estrella2.setVisible(false);
-                    estrella3.setVisible(false);
+                    estrella3.setVisible(false); 
                     estrella4.setVisible(false);
                     estrella5.setVisible(false);
-                    break;
-                case 1:
+                }
+                case 1 -> {
+                   
                     estrella1.setVisible(true);
                     estrella2.setVisible(false);
-                    estrella3.setVisible(false);
+                    estrella3.setVisible(false); 
                     estrella4.setVisible(false);
                     estrella5.setVisible(false);
-                    break;
-                case 2:
+                }
+                case 2 -> {
+                 
                     estrella1.setVisible(true);
                     estrella2.setVisible(true);
-                    estrella3.setVisible(false);
+                    estrella3.setVisible(false); 
                     estrella4.setVisible(false);
                     estrella5.setVisible(false);
-                    break;
-                case 3:
+                }
+                case 3 -> {
+                   
                     estrella1.setVisible(true);
                     estrella2.setVisible(true);
-                    estrella3.setVisible(true);
-                    estrella4.setVisible(false);
+                    estrella3.setVisible(false); 
+                    estrella4.setVisible(true);
                     estrella5.setVisible(false);
-                    break;
-                case 4:
+                }
+                case 4 -> {
+                  
                     estrella1.setVisible(true);
                     estrella2.setVisible(true);
-                    estrella3.setVisible(true);
-                    estrella4.setVisible(false);
-                    estrella5.setVisible(false);
-                    break;
-                case 5:
-                    estrella1.setVisible(true);
-                    estrella2.setVisible(true);
-                    estrella3.setVisible(true);
+                    estrella3.setVisible(false); 
                     estrella4.setVisible(true);
                     estrella5.setVisible(true);
-                    break;
+                }                 
+                
+            }
+            }
+            if(Contadores.getNumeroDeEstrellas()==5){
+        
+                switch(Contadores.getEstrellasFinales()){
+                  
+                    case 0 -> {
+                        estrella1.setVisible(false);
+                        estrella2.setVisible(false);
+                        estrella3.setVisible(false);
+                        estrella4.setVisible(false);
+                        estrella5.setVisible(false);
+                    }
+                    case 1 -> {
+                        estrella1.setVisible(true);
+                        estrella2.setVisible(false);
+                        estrella3.setVisible(false);
+                        estrella4.setVisible(false);
+                        estrella5.setVisible(false);
+                    }
+                    case 2 -> {
+                        estrella1.setVisible(true);
+                        estrella2.setVisible(true);
+                        estrella3.setVisible(false);
+                        estrella4.setVisible(false);
+                        estrella5.setVisible(false);
+                    }
+                    case 3 -> {
+                        estrella1.setVisible(true);
+                        estrella2.setVisible(true);
+                        estrella3.setVisible(true);
+                        estrella4.setVisible(false);
+                        estrella5.setVisible(false);
+                    }
+                    case 4 -> {
+                        estrella1.setVisible(true);
+                        estrella2.setVisible(true);
+                        estrella3.setVisible(true);
+                        estrella4.setVisible(true);
+                        estrella5.setVisible(false);
+                    }
+                    case 5 -> {
+                        estrella1.setVisible(true);
+                        estrella2.setVisible(true);
+                        estrella3.setVisible(true);
+                        estrella4.setVisible(true);
+                        estrella5.setVisible(true);
+                    }
                     
-     
-              }
-              
-        }
+                }            
+            }    
+    }
 
-    }    
+    
     
 }

@@ -25,7 +25,7 @@ import juegomemoriamultiplicacion.Vistas.Contadores;
  *
  * @author BrianKrou
  */
-public class VistaUltimoNivelController implements Initializable {
+public class VistaUltimoNivelControlle implements Initializable {
     @FXML
     private Label puntos;
 

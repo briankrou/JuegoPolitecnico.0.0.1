@@ -597,6 +597,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
     
     //ABRE LA INTERFAS GRAFICA DE PERDISTE
     public void abrirVistaPerdiste(Stage stage) throws IOException{
+        
             System.out.print("la estrellas cargan "+Contadores.getEstrellasOptenidas());
             Contadores.setEstrellasFinales(Contadores.getEstrellasOptenidas());
             System.out.println("Abre venta Perdiste ");

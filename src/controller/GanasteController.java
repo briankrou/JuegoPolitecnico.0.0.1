@@ -100,24 +100,30 @@ public class GanasteController implements Initializable  {
                 switch(Contadores.getDificultad()){
                 
             case "FACIL" -> {
+                
                 Parent root1 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoFacil.fxml"));
                 Scene scene1 = new Scene(root1);
                 stage.setScene(scene1);
                 stage.show();
+                
                 }
                     
             case "MEDIO" -> {
-                Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                
+                Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoMedio.fxml"));
                 Scene scene2 = new Scene(root2);
                 stage.setScene(scene2);
                 stage.show();
+                
                 }
                     
             case "DIFICIL" -> {
-                Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                
+                Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoDificil.fxml"));
                 Scene scene3 = new Scene(root3);
                 stage.setScene(scene3);
                 stage.show();
+                
                 }       
                     
             }  
@@ -125,8 +131,7 @@ public class GanasteController implements Initializable  {
         }
     }
         
-            
-    
+          
     
     public static void  nivel(){
         Contadores.Subirnivel();
