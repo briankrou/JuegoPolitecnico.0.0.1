@@ -82,6 +82,18 @@
     -fx-background-size: 100%;
     -fx-background-repeat: no-repeat;
 }
+.ContenedorEstrellas4{
+    -fx-background-image: url("../img/barraestrellas4.png");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+
+.ContenedorEstrellas5{
+    -fx-background-image: url("../img/barraestrellas5.png");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+
 .text-area .scroll-pane .viewport
 {
     

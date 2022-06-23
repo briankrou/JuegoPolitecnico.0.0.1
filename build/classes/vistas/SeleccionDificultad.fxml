@@ -11,7 +11,7 @@
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnmedio" disable="true" layoutX="251.0" layoutY="188.0" mnemonicParsing="false" onAction="#entrarmedio" text="MEDIO">
+      <Button fx:id="btnmedio" layoutX="251.0" layoutY="188.0" mnemonicParsing="false" onAction="#entrarmedio" text="MEDIO">
          <font>
             <Font size="22.0" />
          </font>

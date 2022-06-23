@@ -16,9 +16,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="567.0" prefWidth="675.0" styleClass="fondoNiveles" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaModoDificilController">
+<BorderPane prefHeight="641.0" prefWidth="762.0" styleClass="fondoNiveles" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaModoDificilController">
    <center>
-      <GridPane alignment="CENTER" hgap="5.0" prefHeight="458.0" prefWidth="657.0" vgap="5.0" BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" hgap="5.0" prefHeight="453.0" prefWidth="571.0" vgap="5.0" BorderPane.alignment="CENTER">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -500,7 +500,7 @@
       </GridPane>
    </center>
    <top>
-      <HBox alignment="CENTER" prefHeight="53.0" prefWidth="676.0" styleClass="fondoNavi" stylesheets="@../CSS/Stile.css" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="53.0" prefWidth="675.0" styleClass="fondoNavi" stylesheets="@../CSS/Stile.css" BorderPane.alignment="CENTER">
          <children>
             <Label prefHeight="51.0" prefWidth="103.0" text="NIVEL:">
                <font>
@@ -536,29 +536,29 @@
                   <Font name="System Bold Italic" size="26.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="223.0" styleClass="ContenedorEstrellas" stylesheets="@../CSS/Stile.css">
+            <HBox alignment="BOTTOM_CENTER" prefHeight="18.0" prefWidth="223.0" styleClass="ContenedorEstrellas5" stylesheets="@../CSS/Stile.css" translateX="2.0" translateY="-3.0">
                <children>
-                  <ImageView fx:id="Estrella1" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0">
+                  <ImageView fx:id="Estrella1" fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="3.0">
                      <image>
                         <Image url="@../img/Star_96x96-32_37882.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Estrella2" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0">
+                  <ImageView fx:id="Estrella2" fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="3.0">
                      <image>
                         <Image url="@../img/Star_96x96-32_37882.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Estrella3" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0">
+                  <ImageView fx:id="Estrella3" fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="3.0">
                      <image>
                         <Image url="@../img/Star_96x96-32_37882.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Estrella4" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Estrella4" fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="3.0">
                      <image>
                         <Image url="@../img/Star_96x96-32_37882.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Estrella5" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Estrella5" fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="3.0">
                      <image>
                         <Image url="@../img/Star_96x96-32_37882.png" />
                      </image>
