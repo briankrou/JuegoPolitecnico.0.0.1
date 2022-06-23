@@ -77,7 +77,7 @@ public class GanasteController implements Initializable  {
     void pasarnivel(ActionEvent event) throws IOException {   
         
         
-        nivel();        
+        subirNivel();      
         Object eventSource= event.getSource();
         Node sourceAsNode = (Node) eventSource;
         Scene oldScene= sourceAsNode.getScene();
@@ -133,9 +133,8 @@ public class GanasteController implements Initializable  {
         
           
     
-    public static void  nivel(){
+    public static void  subirNivel(){
         Contadores.Subirnivel();
-        
 
     }
     @Override

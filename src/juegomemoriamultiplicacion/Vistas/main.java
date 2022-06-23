@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  *
  * @author BrianKrou
  */
-public class JuegoMemoriaM extends Application {
+public class main extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {

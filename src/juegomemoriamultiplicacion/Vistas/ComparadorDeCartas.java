@@ -8,7 +8,7 @@ package juegomemoriamultiplicacion.Vistas;
  *
  * @author BrianKrou
  */
-public class ComparadorDeCartas {
+public abstract class ComparadorDeCartas {
     static int carta1=0;
 
     static int carta2=0;

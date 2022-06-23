@@ -16,7 +16,7 @@ package juegomemoriamultiplicacion.Vistas;
  *
  * @author BrianKrou
  */
-public class Sonidos {
+public  class Sonidos {
     
     
  

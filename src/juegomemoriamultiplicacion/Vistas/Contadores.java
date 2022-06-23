@@ -13,7 +13,7 @@ import java.util.Random;
  */
 
 //Esta clse permite crear  instancias para el funcionamiento del juego menos el nivel que es satic para todo el juego
-public class Contadores {
+public abstract class Contadores {
     
     
 //------------------------------------------------------variables------------------------------------------------------------- 
@@ -52,14 +52,6 @@ public static void ReiniciarPuntos(){
 
 }
 
-public  static int getPuntos(){
-    return puntos;
-}
-
-// RETORNA EL NUMERO DE ESTRELLAS DEL JUEGO SEGUN EL NIVEL 
-public static  int getNumeroDeEstrellas(){
-    return NumeroDeEstrellas;
-}
 
 //METODO RETORNA NUMERO DE ESTRELLAS DEL JUEGO 
 public static  void setNumeroDeEstrellas(int num){
@@ -128,9 +120,23 @@ public static  void sumarCartasOptenidas(){
 public static void reiniciarCartasOptenidas(){
     cartasOptenidas=0;
 }
+//CAMBIA EL TEXTO DE DIFICULTAD 
+public static  void CambiarDificultad(String dificultad){
+    Dificultad=dificultad;
+}
 
 ///-----------------------------------------------------Metodos Set-----------------------------------------------------------
 
+
+
+public  static int getPuntos(){
+    return puntos;
+}
+
+// RETORNA EL NUMERO DE ESTRELLAS DEL JUEGO SEGUN EL NIVEL 
+public static  int getNumeroDeEstrellas(){
+    return NumeroDeEstrellas;
+}
 //RETORNA EL NUMERO DE ESTRELLAS OPTENIDAS 
 
 public static  int getEstrellasOptenidas(){
@@ -162,19 +168,10 @@ public  static int  getCartasOptenidas(){
     
 }
 
-
-
-
-//CAMBIA EL TEXTO DE DIFICULTAD 
-public static  void CambiarDificultad(String dificultad){
-    Dificultad=dificultad;
-}
 //RETORNA EL VALOR DEL TEXTO DE DIFICULTAD
 public static  String getDificultad(){
     return Dificultad;
 }
-
-
 
 public static int numeroaleatorio(int num){
  
@@ -183,7 +180,4 @@ public static int numeroaleatorio(int num){
                 System.out.println("nuemero aleatorio "+numeroAleatorio);
                 return numeroAleatorio;
     }
-
-
-    
 }
