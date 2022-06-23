@@ -103,14 +103,14 @@ public class PerdisteController implements Initializable {
             }
                     
             case "MEDIO" -> {
-                Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                Parent root2 = FXMLLoader.load(getClass().getResource("/vistas/VIstaModoMedio.fxml"));
                 Scene scene2 = new Scene(root2);
                 stage.setScene(scene2);
                 stage.show();
             }
                     
             case "DIFICIL" -> {
-                Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/.fxml"));
+                Parent root3 = FXMLLoader.load(getClass().getResource("/vistas/VistaModoDificil.fxml"));
                 Scene scene3 = new Scene(root3);
                 stage.setScene(scene3);
                 stage.show();

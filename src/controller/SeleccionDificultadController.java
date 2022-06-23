@@ -39,7 +39,7 @@ public class SeleccionDificultadController implements Initializable {
        Stage stage =(Stage) window;
        stage.hide();
        
-       
+       Contadores.CambiarDificultad("DIFICIL");
        Parent root = FXMLLoader.load(getClass().getResource("/vistas/VistaModoDificil.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -74,6 +74,7 @@ public class SeleccionDificultadController implements Initializable {
        Window window =oldScene.getWindow();
        Stage stage =(Stage) window;
        stage.hide();
+       Contadores.CambiarDificultad("MEDIO");
        
         Parent root = FXMLLoader.load(getClass().getResource("/vistas/VistaModoMedio.fxml"));
         Scene scene = new Scene(root);

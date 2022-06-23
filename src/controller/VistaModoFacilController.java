@@ -807,7 +807,7 @@ void cartaElegidaB3(ActionEvent event) throws IOException {
    //posiciona carta2 que es la que solo tiene el resultado
     public void PosicionaCarta2(ParejaDeCartas Carta){
 
-     System.out.println("INICIAAAA CARTA----------------- 2");
+     System.out.println("INICIAAAA CARTA---------------///S2");
      
             int contador2=0;
 

@@ -7,6 +7,7 @@
 .fondoInicio
 {
     -fx-background-image: url("../img/fondoinicio.jpg");
+    
 }
 
 .fondoNiveles
@@ -24,6 +25,21 @@
     -fx-background-image: url("../img/ganaste.png"); 
     -fx-background-size: 100%;
     
+}
+
+.fondoUltimoNivel{
+    -fx-background-image: url("../img/ultimo.jpg");
+    -fx-background-size: 100%;
+}
+.fondoInformacion{
+    
+    -fx-background-size: 100%;
+    -fx-background-image: url("../img/fondo1.jpg"); 
+    
+}
+.fondoInformacion2{
+    -fx-background-image: url("../img/info.png");
+        -fx-background-size: 100%;
 }
 .cartAtras{
     -fx-background-image: url("../img/card.png"); 
@@ -80,4 +96,7 @@
 }
 .imgbtnSonido{
     -fx-background-color: transparent;
+}
+.btnsonido_img{
+    -fx-background-color: red;
 }

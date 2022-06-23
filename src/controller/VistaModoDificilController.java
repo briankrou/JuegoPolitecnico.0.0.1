@@ -3,15 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
 package controller;
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,15 +20,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import juegomemoriamultiplicacion.Vistas.ComparadorDeCartas;
-import  juegomemoriamultiplicacion.Vistas.Contadores;
-import  juegomemoriamultiplicacion.Vistas.ParejaDeCartas;
+import juegomemoriamultiplicacion.Vistas.Contadores;
+import juegomemoriamultiplicacion.Vistas.ParejaDeCartas;
 import juegomemoriamultiplicacion.Vistas.Sonidos;
-import java.io.File;
-import javafx.scene.media.MediaView;
-import javafx.stage.Modality;
+
 
 /**
  * FXML Controller class
@@ -1424,7 +1419,7 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
           sonido();
      //INICIA LOS VALORES DEL JUEGO
      
-     System.out.print("INICIA EL NIVEL:-----> "+Contadores.getNivel());
+     System.out.println("INICIA EL NIVEL:-----> "+Contadores.getNivel());
      
 
      
@@ -1441,10 +1436,10 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
             labelDificultad.setText(Contadores.getDificultad());
             
             //inicia el numero de estrellas que hay que optener en el juego
-            Contadores.setNumeroDeEstrellas(3);
+            Contadores.setNumeroDeEstrellas(5);
 
             //Asignamos el numero de cartas del juego
-            Contadores.setNumeroDeCartas(3);
+            Contadores.setNumeroDeCartas(10);
                       
             // muestra el valor de dficultad 
             Nivel.setText(String.valueOf(Contadores.getNivel()));
@@ -1553,7 +1548,7 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
         System.out.println("son iguales ");
         Contadores.sumarCartasOptenidas();
         Contadores.aumentarNumeroDeEstrellasOptenidas();
-        System.out.print("Las estreñas optenidaso son ---->"+Contadores.getEstrellasOptenidas());
+        System.out.println("Las estreñas optenidaso son ---->"+Contadores.getEstrellasOptenidas());
         mostrarestrella(Contadores.getEstrellasOptenidas());
         eliminarCarta1();
         eliminarCarta2();
@@ -1656,19 +1651,35 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
                 }
             }
         }
+    Carta4.juegoNuevo(1);
+     Carta5.juegoNuevo(5);
+      Carta6.juegoNuevo(4);
+       Carta7.juegoNuevo(6);
+        Carta8.juegoNuevo(8);
+         Carta9.juegoNuevo(2);
+          Carta10.juegoNuevo(5);
+    
+    
     
         PosicionaCarta1(Carta1);
         PosicionaCarta1(Carta2);
         PosicionaCarta1(Carta3);
+        PosicionaCarta1(Carta4);
+        PosicionaCarta1(Carta5);
+        PosicionaCarta1(Carta6);
+        PosicionaCarta1(Carta7);
+        PosicionaCarta1(Carta8);
+        PosicionaCarta1(Carta9);
+        PosicionaCarta1(Carta10);
   
 }
   //posiciona carta1 que es la que solo tiene la operacion
     public void PosicionaCarta1(ParejaDeCartas Carta){
-                System.out.println("INICIAAAA CARTA ------------------1");
+                System.out.println("INICIAAAA CARTA ----------->>>>>>>>>>1");
             int contador2=0;
 
         while(contador2<1){
-            switch(Contadores.numeroaleatorio(5)){
+            switch(Contadores.numeroaleatorio(19)){
                 case 0:
                        
                     if(a1==0){
@@ -1961,13 +1972,13 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
 
    //posiciona carta2 que es la que solo tiene el resultado
     public void PosicionaCarta2(ParejaDeCartas Carta){
-
-     System.out.println("INICIAAAA CARTA----------------- 2");
+            
+     System.out.println("INICIAAAA CARTA-----------------/////////////// 2");
      
             int contador2=0;
 
         while(contador2<1){
-            switch(Contadores.numeroaleatorio(5)){
+            switch(Contadores.numeroaleatorio(19)){
                 
                 case 0:
                     if(a1==0){
@@ -1977,9 +1988,10 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
                         a1=Carta.getResultado();
                         System.out.println("2---carta A1 es "+a1); 
                         contador2++;
-                        break;
+                        break;      
+                        
                     }
-
+                    
                 case 1:
                     if(a2==0){
                         System.out.println("2>>>carta A2 es "+a2);
@@ -2093,6 +2105,86 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
                         contador2++;
                 
                         break;
+                    }           
+                case 12:
+                    if(d1==0){
+                        System.out.println("2>>>carta D1 es "+d1);  
+                        TextD1L2=String.valueOf(Carta.getResultado());
+                        d1=Carta.getResultado();
+                        System.out.println("2---carta D1 es "+d1); 
+                        contador2++;
+                
+                        break;
+                    }      
+                case 13:
+                    if(d2==0){
+                        System.out.println("2>>>carta D2 es "+d2);  
+                        TextD2L2=String.valueOf(Carta.getResultado());
+                        d2=Carta.getResultado();
+                        System.out.println("2---carta D2 es "+d2); 
+                        contador2++;
+                
+                        break;
+                    }    
+                case 14:
+                    if(d3==0){
+                        System.out.println("2>>>carta D3 es "+d3);  
+                        TextD3L2=String.valueOf(Carta.getResultado());
+                        d3=Carta.getResultado();
+                        System.out.println("2---carta D3 es "+d3); 
+                        contador2++;
+                
+                        break;
+                    }    
+                case 15:
+                    if(d4==0){
+                        System.out.println("2>>>carta D4 es "+d4);  
+                        TextD4L2=String.valueOf(Carta.getResultado());
+                        d4=Carta.getResultado();
+                        System.out.println("2---carta D4 es "+d4); 
+                        contador2++;
+                
+                        break;
+                    }    
+                case 16:
+                    if(e1==0){
+                        System.out.println("2>>>carta E1 es "+e1);  
+                        TextE1L2=String.valueOf(Carta.getResultado());
+                        e1=Carta.getResultado();
+                        System.out.println("2---carta E1 es "+e1); 
+                        contador2++;
+                
+                        break;
+                    }    
+                case 17:
+                    if(e2==0){
+                        System.out.println("2>>>carta E2 es "+e2);  
+                        TextE2L2=String.valueOf(Carta.getResultado());
+                        e2=Carta.getResultado();
+                        System.out.println("2---carta E2 es "+e2); 
+                        contador2++;
+                
+                        break;
+                    } 
+                case 18:
+                    if(e3==0){
+                        System.out.println("2>>>carta E3 es "+e3);  
+                        TextE3L2=String.valueOf(Carta.getResultado());
+                        e3=Carta.getResultado();
+                        System.out.println("2---carta E3 es "+e3); 
+                        contador2++;
+                
+                        break;
+                    }   
+                case 19:
+                    if(e4==0){
+                        System.out.println("2>>>carta E4 es "+e4);  
+                        TextE4L2=String.valueOf(Carta.getResultado());
+                        e4=Carta.getResultado();
+                        System.out.println("2---carta E4 es "+e4); 
+                        contador2++;
+                
+                        break;
                     }                       
      }
     }}
@@ -2102,8 +2194,11 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
     public void ocultarCartas(){
         System.out.println("--Ocultando cartas--");
         
-            contenedorA1.setVisible(false);contenedorA2.setVisible(false);contenedorA3.setVisible(false);
-            contenedorB1.setVisible(false);contenedorB2.setVisible(false);contenedorB3.setVisible(false);
+            contenedorA1.setVisible(false);contenedorA2.setVisible(false);contenedorA3.setVisible(false);contenedorA4.setVisible(false);
+            contenedorB1.setVisible(false);contenedorB2.setVisible(false);contenedorB3.setVisible(false);contenedorB4.setVisible(false);
+            contenedorC1.setVisible(false);contenedorC2.setVisible(false);contenedorC3.setVisible(false);contenedorC4.setVisible(false);
+            contenedorD1.setVisible(false);contenedorD2.setVisible(false);contenedorD3.setVisible(false);contenedorD4.setVisible(false);
+            contenedorE1.setVisible(false);contenedorE2.setVisible(false);contenedorE3.setVisible(false);contenedorE4.setVisible(false);
     }
     
     //metodo que elimina la primer carta y invoca al metodo para eliminar la segunda carta 
@@ -2114,10 +2209,28 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
             case "a1" -> btna1.setVisible(false);
             case "a2" -> btna2.setVisible(false);
             case "a3" -> btna3.setVisible(false);
+            case "a4" -> btna4.setVisible(false);
+            
             case "b1" -> btnb1.setVisible(false);
-            case "b2" -> btnb2.setVisible(false);   
+            case "b2" -> btnb2.setVisible(false);
             case "b3" -> btnb3.setVisible(false);
-               
+            case "b4" -> btnb4.setVisible(false);
+            
+            case "c1" -> btnc1.setVisible(false);
+            case "c2" -> btnc2.setVisible(false);   
+            case "c3" -> btnc3.setVisible(false);
+            case "c4" -> btnc4.setVisible(false);
+                        
+            case "d1" -> btnd1.setVisible(false);
+            case "d2" -> btnd2.setVisible(false);   
+            case "d3" -> btnd3.setVisible(false);
+            case "d4" -> btnd4.setVisible(false);
+            
+                        
+            case "e1" -> btne1.setVisible(false);
+            case "e2" -> btne2.setVisible(false);   
+            case "e3" -> btne3.setVisible(false);
+            case "e4" -> btne4.setVisible(false);
         }
     }
     
@@ -2130,10 +2243,28 @@ void cartaElegidaE4(ActionEvent event) throws IOException {
             case "a1" -> btna1.setVisible(false);
             case "a2" -> btna2.setVisible(false);
             case "a3" -> btna3.setVisible(false);
+            case "a4" -> btna4.setVisible(false);
+            
             case "b1" -> btnb1.setVisible(false);
             case "b2" -> btnb2.setVisible(false);
             case "b3" -> btnb3.setVisible(false);
             case "b4" -> btnb4.setVisible(false);
+            
+            case "c1" -> btnc1.setVisible(false);
+            case "c2" -> btnc2.setVisible(false);   
+            case "c3" -> btnc3.setVisible(false);
+            case "c4" -> btnc4.setVisible(false);
+                        
+            case "d1" -> btnd1.setVisible(false);
+            case "d2" -> btnd2.setVisible(false);   
+            case "d3" -> btnd3.setVisible(false);
+            case "d4" -> btnd4.setVisible(false);
+            
+                        
+            case "e1" -> btne1.setVisible(false);
+            case "e2" -> btne2.setVisible(false);   
+            case "e3" -> btne3.setVisible(false);
+            case "e4" -> btne4.setVisible(false);
             
         }
         
