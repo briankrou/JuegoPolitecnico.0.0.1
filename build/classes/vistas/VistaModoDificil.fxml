@@ -16,7 +16,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="567.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaModoDificilController">
+<BorderPane prefHeight="567.0" prefWidth="675.0" styleClass="fondoNiveles" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaModoDificilController">
    <center>
       <GridPane alignment="CENTER" hgap="5.0" prefHeight="458.0" prefWidth="657.0" vgap="5.0" BorderPane.alignment="CENTER">
          <columnConstraints>
