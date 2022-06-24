@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="557.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GanasteController">
+<BorderPane prefHeight="557.0" prefWidth="684.0" styleClass="fondoGanaste" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GanasteController">
    <center>
       <VBox alignment="CENTER" prefHeight="243.0" prefWidth="288.0" BorderPane.alignment="CENTER">
          <children>
@@ -87,7 +87,7 @@
       </VBox>
    </center>
    <top>
-      <Pane prefHeight="66.0" prefWidth="683.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="66.0" prefWidth="683.0" styleClass="fondoGanaste" BorderPane.alignment="CENTER" />
    </top>
    <left>
       <Pane prefHeight="374.0" prefWidth="91.0" BorderPane.alignment="CENTER" />
@@ -96,6 +96,6 @@
       <Pane prefHeight="374.0" prefWidth="107.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <Pane prefHeight="69.0" prefWidth="574.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="69.0" prefWidth="574.0" styleClass="fondoGanaste" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

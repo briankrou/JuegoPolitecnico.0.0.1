@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="fondoInicio" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principalController">
    <left>
       <Pane prefHeight="237.0" prefWidth="115.0" BorderPane.alignment="CENTER" />
    </left>
@@ -35,7 +34,7 @@
                <graphic>
                   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/Stile.css">
                      <children>
-                        <Label prefHeight="72.0" prefWidth="127.0" text="Informacion" textFill="#06e842">
+                        <Label prefHeight="72.0" prefWidth="127.0" text="Informacion">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -62,7 +61,7 @@
                <graphic>
                   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="191.0" stylesheets="@../CSS/Stile.css">
                      <children>
-                        <Label text="Iniciar" textFill="#06e842">
+                        <Label text="Iniciar">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -89,7 +88,7 @@
                <graphic>
                   <HBox alignment="CENTER" prefHeight="49.0" prefWidth="200.0" stylesheets="@../CSS/Stile.css">
                      <children>
-                        <Label text="Salir" textFill="#06e842">
+                        <Label text="Salir">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>

@@ -6,7 +6,8 @@
 
 .fondoInicio
 {
-    -fx-background-image: url("../img/fondoinicio.jpg");
+    -fx-background-image: url("../img/fondoinicio.png");
+    -fx-background-size: 100%;
     
 }
 
@@ -41,6 +42,10 @@
     -fx-background-repeat: no-repeat;
     -fx-background-image: url("../img/info.png");
      -fx-background-size: 100%;
+}
+.fondoPerdiste{
+        -fx-background-size: 100%;
+    -fx-background-image: url("../img/perdiste.jpg");
 }
 .cartAtras{
     -fx-background-image: url("../img/card.png"); 
@@ -112,4 +117,10 @@
 }
 .btnsonido_img{
     -fx-background-color: red;
+}
+
+.btnStyle
+{
+    -fx-border-width: 2;
+    -fx-background-color: transparent;
 }
