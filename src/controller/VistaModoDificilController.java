@@ -509,10 +509,6 @@ ParejaDeCartas Carta10=new ParejaDeCartas();
     String TextE3L1,TextE3L2="",TextE3L3;
     //texto carta E4
     String TextE4L1,TextE4L2="",TextE4L3;
-    
-            
-    Image icon= new Image(getClass().getResourceAsStream("/img/exit.png"));
-    File img = new File("archivo.jpg");
 
     //REPRODUCE SONIDO
   
