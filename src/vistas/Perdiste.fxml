@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="610.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PerdisteController">
+<BorderPane prefHeight="610.0" prefWidth="760.0" styleClass="fondoPerdiste" stylesheets="@../CSS/Stile.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PerdisteController">
    <center>
-      <VBox alignment="CENTER" prefHeight="558.0" prefWidth="573.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="558.0" prefWidth="573.0" styleClass="fondoPerdiste" BorderPane.alignment="CENTER">
          <children>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -69,12 +69,12 @@
                </children>
             </Pane>
             <HBox prefHeight="23.0" prefWidth="670.0" />
-            <Label prefHeight="95.0" prefWidth="219.0" text="Perdiste">
+            <Label prefHeight="95.0" prefWidth="219.0" text="Perdiste" textFill="WHITE">
                <font>
                   <Font size="61.0" />
                </font>
             </Label>
-            <Label fx:id="puntos" alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="220.0" text="0000" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <Label fx:id="puntos" alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="220.0" text="0000" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font size="36.0" />
                </font>
@@ -96,9 +96,9 @@
       <Pane prefHeight="272.0" prefWidth="64.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Pane prefHeight="558.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="558.0" prefWidth="70.0" stylesheets="@../CSS/Stile.css" BorderPane.alignment="CENTER" />
    </right>
    <top>
-      <Pane prefHeight="52.0" prefWidth="670.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="52.0" prefWidth="670.0" styleClass="fondoPerdiste" BorderPane.alignment="CENTER" />
    </top>
 </BorderPane>

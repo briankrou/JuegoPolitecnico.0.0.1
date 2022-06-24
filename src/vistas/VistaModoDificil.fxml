@@ -600,8 +600,22 @@
    <right>
       <Pane prefHeight="458.0" prefWidth="93.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="reiniciar" layoutX="24.0" layoutY="204.0" mnemonicParsing="false" onAction="#abrirInformacion" prefHeight="54.0" prefWidth="45.0" text="informacion" />
-            <Button layoutX="21.0" layoutY="75.0" mnemonicParsing="false" onAction="#RegresarInicio" prefHeight="54.0" prefWidth="52.0" text="inicio" />
+            <Button fx:id="reiniciar" layoutX="9.0" layoutY="186.0" mnemonicParsing="false" onAction="#abrirInformacion" prefHeight="54.0" prefWidth="45.0" styleClass="btnStyle">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/in.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="5.0" layoutY="70.0" mnemonicParsing="false" onAction="#RegresarInicio" prefHeight="54.0" prefWidth="52.0" styleClass="btnStyle">
+               <graphic>
+                  <ImageView fitHeight="86.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ini.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Button fx:id="mute" layoutX="21.0" layoutY="308.0" mnemonicParsing="false" onAction="#soudVol" prefHeight="54.0" prefWidth="52.0" styleClass="btnSonido" stylesheets="@../CSS/Stile.css">
                <graphic>
                   <Pane prefHeight="200.0" prefWidth="200.0">
